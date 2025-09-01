@@ -11,6 +11,7 @@ def BinarySearch(searchlist,goal):
  found = False
  startpos = 0
  endpos = len(searchlist) -1
+ comparisons = 0
 
 
  print ("Endpos at beginning = ",endpos)
@@ -18,6 +19,7 @@ def BinarySearch(searchlist,goal):
 
  while (startpos <= endpos) and found == False:
      middle = (startpos+endpos)//2 #Integer Division
+     comparisons+=1
      if searchlist[middle] == goal:
          found = True
      elif searchlist[middle]<goal:
@@ -27,9 +29,9 @@ def BinarySearch(searchlist,goal):
 
 
  if found == True:
-   print("Match has been found at position",middle)
+   print("Match has been found at position",middle,"witihn",comparisons,"comparisons.")
  else:
-   print("Goal not found")
+   print(-1)
 
 
 values = initialise()
