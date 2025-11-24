@@ -1,0 +1,16 @@
+div{color:red;
+background-color:lightgoldenrodyellow;}
+
+.example1{display:block;}
+.example2{display:none;}
+.example3{display:none;}
+@media screen and (min-width: 300px) and (max-width: 599px) {
+  .example1 { display: none; }
+  .example2 { display: none; }
+  .example3 { display: block; }
+}
+@media screen and (min-width:600px) and (max-width: 992px) {
+.example1{display:none;}
+.example2{display:block;}
+.example3{display:none;}
+}
